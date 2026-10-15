@@ -10,7 +10,7 @@ class AcademicController extends Controller
     public function index()
     {
         $academics = Academic::select([
-            'id', 'slug', 'name', 'title', 'institute', 'centre', 'department',
+            'id', 'slug', 'name', 'title', 'email', 'photo', 'institute', 'centre', 'department',
         ])->orderBy('name')->get();
 
         return view('academics.index', compact('academics'));
