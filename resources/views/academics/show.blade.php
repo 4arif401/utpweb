@@ -542,9 +542,9 @@
 <div class="profile-hero">
     <div class="profile-hero-inner fade-up">
         <div class="breadcrumb-nav">
-            <a href="{{ route('academics.index') }}">Home</a>
+            <a href="{{ route('home') }}">Home</a>
             <span class="sep"><i class="fa fa-chevron-right"></i></span>
-            <a href="{{ route('academics.index') }}">Academics</a>
+            <a href="{{ route('academics.index') }}">Profiles</a>
             <span class="sep"><i class="fa fa-chevron-right"></i></span>
             <span class="current">{{ $academic->name }}</span>
         </div>

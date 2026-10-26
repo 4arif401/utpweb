@@ -4,11 +4,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AcademicController;
 use App\Http\Controllers\Admin\AcademicAdminController;
 
+use App\Http\Controllers\HomeController;
+
 // ─── Public Routes ──────────────────────────────────────────────────────────
 
-Route::get('/', function () {
-    return redirect()->route('academics.index');
-});
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/academics', [AcademicController::class, 'index'])->name('academics.index');
 Route::get('/academics/{slug}', [AcademicController::class, 'show'])->name('academics.show');

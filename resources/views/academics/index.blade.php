@@ -324,6 +324,15 @@
 <!-- ── Hero Section ────────────────────────────────────────── -->
 <div class="hero">
     <div class="hero-inner fade-up">
+        <nav class="mb-3" style="font-size: 0.82rem;">
+            <a href="{{ route('home') }}" style="color: rgba(255,255,255,0.65); text-decoration: none;">
+                <i class="fa fa-home me-1"></i>Home
+            </a>
+            <span class="mx-2" style="color: rgba(255,255,255,0.35); font-size: 0.65rem;">
+                <i class="fa fa-chevron-right"></i>
+            </span>
+            <span style="color: var(--gold-light); font-weight: 500;">Profiles</span>
+        </nav>
         <div class="hero-badge">
             <i class="fa fa-graduation-cap"></i>
             Academic Directory
@@ -363,7 +372,7 @@
     <div class="scholars-toolbar fade-up" style="animation-delay:.05s">
         <div class="search-box">
             <i class="fa fa-search"></i>
-            <input type="text" id="staffSearch" placeholder="Search by name, department, institute…" autocomplete="off">
+            <input type="text" id="staffSearch" value="{{ request('q', request('search', '')) }}" placeholder="Search by name, department, institute…" autocomplete="off">
         </div>
         @php
             $deptCounts  = $academics->countBy('department');
@@ -494,6 +503,14 @@
     searchInput.addEventListener('input', filter);
     deptSelect.addEventListener('change', filter);
     titleSelect.addEventListener('change', filter);
+
+    // If query string has q or search, run filter immediately
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialQuery = urlParams.get('q') || urlParams.get('search');
+    if (initialQuery) {
+        searchInput.value = initialQuery;
+        filter();
+    }
 })();
 </script>
 @endsection

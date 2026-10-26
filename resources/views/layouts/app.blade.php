@@ -270,19 +270,22 @@
 </head>
 <body>
 
+    @hasSection('navbar')
+        @yield('navbar')
+    @else
     <!-- ── Navbar ──────────────────────────────────────────────── -->
     <nav class="main-nav" id="mainNav">
         <div class="nav-inner">
-            <a class="navbar-brand" href="{{ route('academics.index') }}">
+            <a class="navbar-brand" href="{{ route('home') }}">
                 <div class="brand-icon">U</div>
                 <div class="brand-text"><span>UTP</span>Web</div>
             </a>
 
             <div class="nav-links">
-                <a class="nav-link-item {{ request()->routeIs('academics.index') ? 'active' : '' }}"
-                   href="{{ route('academics.index') }}">Home</a>
+                <a class="nav-link-item {{ request()->routeIs('home') ? 'active' : '' }}"
+                   href="{{ route('home') }}">Home</a>
                 <a class="nav-link-item {{ request()->routeIs('academics.*') ? 'active' : '' }}"
-                   href="{{ route('academics.index') }}">Academics</a>
+                   href="{{ route('academics.index') }}">Profiles</a>
 
                 @auth
                     <a class="nav-link-item {{ request()->routeIs('admin.*') ? 'active' : '' }}"
@@ -301,6 +304,7 @@
             </div>
         </div>
     </nav>
+    @endif
 
     <!-- Flash Messages -->
     @if(session('success'))

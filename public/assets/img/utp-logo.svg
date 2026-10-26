@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 90" width="460" height="90">
+  <defs>
+    <linearGradient id="utpTeal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00C4B4" />
+      <stop offset="100%" stop-color="#008075" />
+    </linearGradient>
+    <linearGradient id="utpNavy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E2A47" />
+      <stop offset="100%" stop-color="#06182B" />
+    </linearGradient>
+    <linearGradient id="utpGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5C842" />
+      <stop offset="100%" stop-color="#C99718" />
+    </linearGradient>
+  </defs>
+
+  <!-- Crest / Emblem on the right or left -->
+  <g transform="translate(15, 10)">
+    <!-- Outer Shield / Shape -->
+    <path d="M 35 2 C 55 2, 68 12, 68 35 C 68 58, 48 70, 35 74 C 22 70, 2 58, 2 35 C 2 12, 15 2, 35 2 Z" 
+          fill="url(#utpNavy)" stroke="url(#utpGold)" stroke-width="2.5" />
+    
+    <!-- Petronas Inspired Oil Drop / Flame Core -->
+    <path d="M 35 15 C 43 25, 52 35, 52 46 C 52 56, 44 63, 35 63 C 26 63, 18 56, 18 46 C 18 35, 27 25, 35 15 Z" 
+          fill="url(#utpTeal)" />
+    
+    <!-- Inner Drop Accent -->
+    <path d="M 35 27 C 39 33, 44 40, 44 47 C 44 52, 40 56, 35 56 C 30 56, 26 52, 26 47 C 26 40, 31 33, 35 27 Z" 
+          fill="#FFFFFF" opacity="0.92" />
+    <circle cx="35" cy="46" r="4.5" fill="url(#utpTeal)" />
+
+    <!-- Radiant Accent Arch -->
+    <path d="M 12 28 C 18 10, 52 10, 58 28" fill="none" stroke="url(#utpGold)" stroke-width="1.8" stroke-linecap="round" />
+  </g>
+
+  <!-- Divider Line -->
+  <line x1="98" y1="14" x2="98" y2="76" stroke="#D1D5DB" stroke-width="1.5" />
+
+  <!-- Typography -->
+  <g transform="translate(112, 0)">
+    <text x="0" y="32" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="800" fill="#0A192F" letter-spacing="2.2">UNIVERSITI</text>
+    <text x="0" y="52" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="800" fill="#0A192F" letter-spacing="2.2">TEKNOLOGI</text>
+    <text x="0" y="74" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="900" fill="#008075" letter-spacing="2.8">PETRONAS</text>
+  </g>
+</svg>
